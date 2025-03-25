@@ -1,4 +1,4 @@
-package com.example.examplemod.block;
+package guinnevere.block;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
