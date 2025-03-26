@@ -26,6 +26,9 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredItem;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+
 
 
 @Mod(nickyblock.MODID)
@@ -72,7 +75,7 @@ public class nickyblock {
                     .destroyTime(1.5f)
                     .explosionResistance(6.0f)
                     .sound(SoundType.AMETHYST)
-                    .mapColor(MapColor.QUARTZ) // TEMPORARY
+                    .noOcclusion()
             )
     );
 
@@ -82,6 +85,7 @@ public class nickyblock {
             POSM_BLOCK,
             new Item.Properties()
     );
+
 
     public nickyblock(IEventBus modEventBus, ModContainer modContainer)
     {
