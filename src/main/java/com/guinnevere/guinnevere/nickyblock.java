@@ -13,7 +13,6 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.level.material.MapColor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -67,12 +66,12 @@ public class nickyblock {
     // BTW I CHANGED SOME STUFFS AND LOCATION AND NAMES, PLEASE DON'T CHANGE THESE OR MOVE THESE IT'S VERY IMPORTANT~! 💖
     public static final DeferredBlock<Block> POSM_BLOCK = BLOCKS.register(
             "posm",
-            registryName -> new Block(BlockBehaviour.Properties.of()
+            registryName -> new PosmBlock(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
                     .destroyTime(1.5f)
                     .explosionResistance(6.0f)
                     .sound(SoundType.AMETHYST)
-                    .mapColor(MapColor.QUARTZ) // TEMPORARY
+                    .noOcclusion()
             )
     );
 
