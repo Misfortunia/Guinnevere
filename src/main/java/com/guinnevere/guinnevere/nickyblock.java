@@ -64,10 +64,10 @@ public class nickyblock {
     );
 
 
-    // HERE'S YOUR GUI_BLOCK
+    // HERE'S YOUR GUI_BLOCK (posm block now! ehhehe)
     // BTW I CHANGED SOME STUFFS AND LOCATION AND NAMES, PLEASE DON'T CHANGE THESE OR MOVE THESE IT'S VERY IMPORTANT~! 💖
-    public static final DeferredBlock<Block> GUI_BLOCK = BLOCKS.register(
-            "guibox",
+    public static final DeferredBlock<Block> POSM_BLOCK = BLOCKS.register(
+            "posm",
             registryName -> new Block(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
                     .destroyTime(1.5f)
@@ -77,10 +77,10 @@ public class nickyblock {
             )
     );
 
-    //Adds Infinicky Block Item
-    public static final DeferredItem<BlockItem> GUI_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
-            "guibox",
-            GUI_BLOCK,
+    //Adds Posm Block Item
+    public static final DeferredItem<BlockItem> POSM_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
+            "posm",
+            POSM_BLOCK,
             new Item.Properties()
     );
 
@@ -109,7 +109,7 @@ public class nickyblock {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
             event.accept(INFINICKY_BLOCK_ITEM);
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-            event.accept(GUI_BLOCK_ITEM);
+            event.accept(POSM_BLOCK_ITEM);
     }
 
     @SubscribeEvent
