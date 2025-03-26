@@ -47,7 +47,7 @@ public class nickyblock {
     // Adds Infinicky Block
     public static final DeferredBlock<Block> INFINICKY_BLOCK = BLOCKS.register("infinicky", //Registering the block "Infinicky"
     // FUNCTIONS OF INFINICKY
-            registryName -> new Block(BlockBehaviour.Properties.of()
+            registryName -> new InfinickyBlock(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName)) // Sets ID of the block
                     .destroyTime(5.0f) // Sets the destroy time
                     .explosionResistance(10.0f) // Sets the explosion resistance
