@@ -1,27 +1,11 @@
 
-Installation information
+Guinnevere - An Educational Project To Build Your Minecraft AI Companion
 =======
+Guinnevere introduces an entirely new level of immersion to Minecraft, combining innovative blocks with a one-of-a-kind NPC companion. This mod isn't just about adding features—it's about transforming how you experience the game. At its heart lies the NPC, brought to life through advanced AI technology. This intelligent character is designed to interact with players in meaningful ways, responding to your questions, engaging in thoughtful conversations, and accompanying you on your adventures across the vast Minecraft world.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions at [github](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+Imagine having a loyal friend in your corner—a companion who grows with you throughout your journey, offering insights, encouragement, and even a bit of personality to keep things interesting. Whether you're uncovering hidden caves, tackling formidable mobs, or creating architectural masterpieces, Guinnevere is there to make every moment special. Her presence turns solitary exploration into shared experiences, weaving together the beauty of companionship with the thrill of discovery.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+But Guinnevere doesn’t stop there. Beyond the engaging NPC interactions, the mod introduces a selection of carefully designed blocks that seamlessly integrate into Minecraft's visual and functional style. These blocks offer players new possibilities for building, crafting, and creative expression, blending perfectly with the game's timeless aesthetic while opening the door to fresh opportunities.
 
-> **Note**: For Eclipse, use tasks in `Launch Group` instead of ones founds in `Java Application`. A preparation task must run before launching the game. NeoGradle uses launch groups to do these subsequently.
+This mod represents more than just an upgrade to gameplay—it’s a celebration of imagination and technology coming together. It creates a unique environment where AI complements creativity, offering players an experience that’s as fun as it is innovative. Whether you’re a seasoned builder, an adventurous explorer, or simply a player looking for a deeper connection within the game, Guinnevere is your gateway to a more dynamic and interactive Minecraft world.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
-
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
