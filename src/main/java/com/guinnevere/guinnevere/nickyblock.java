@@ -25,6 +25,9 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredItem;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+
 
 
 @Mod(nickyblock.MODID)
@@ -81,6 +84,7 @@ public class nickyblock {
             POSM_BLOCK,
             new Item.Properties()
     );
+
 
     public nickyblock(IEventBus modEventBus, ModContainer modContainer)
     {

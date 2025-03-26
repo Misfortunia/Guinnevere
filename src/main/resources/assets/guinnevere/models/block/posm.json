@@ -1,5 +1,6 @@
 {
   "credit": "made with blockbench",
+  "render_type": "minecraft:cutout",
   "textures": {
     "0": "guinnevere:block/posm"
   },
