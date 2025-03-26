@@ -1,7 +1,7 @@
 {
   "credit": "made with blockbench",
   "textures": {
-    "0": "guinnevere:block/posm_body"
+    "0": "guinnevere:block/posm"
   },
   "elements": [
     {
