@@ -1,3 +1,6 @@
 {
-  "parent": "guinnevere:block/posm"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "guinnevere:item/posm_body"
+  }
 }

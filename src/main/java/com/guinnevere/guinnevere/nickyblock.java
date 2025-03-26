@@ -63,7 +63,6 @@ public class nickyblock {
             new Item.Properties()
     );
 
-
     // HERE'S YOUR GUI_BLOCK (posm block now! ehhehe)
     // BTW I CHANGED SOME STUFFS AND LOCATION AND NAMES, PLEASE DON'T CHANGE THESE OR MOVE THESE IT'S VERY IMPORTANT~! 💖
     public static final DeferredBlock<Block> POSM_BLOCK = BLOCKS.register(

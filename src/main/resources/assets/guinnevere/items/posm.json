@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "guinnevere:block/posm"
+    "model": "guinnevere:item/posm"
   }
 }
