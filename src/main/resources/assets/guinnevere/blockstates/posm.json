@@ -1,6 +1,18 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
+      "model": "guinnevere:block/posm",
+       "y": 90
+    },
+    "facing=east": {
+      "model": "guinnevere:block/posm",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "guinnevere:block/posm",
+      "y": 270
+    },
+    "facing=west": {
       "model": "guinnevere:block/posm"
     }
   }
