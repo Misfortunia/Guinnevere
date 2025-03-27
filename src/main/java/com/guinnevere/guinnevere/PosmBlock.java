@@ -1,35 +1,64 @@
 package com.guinnevere.guinnevere;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class PosmBlock extends Block {
 
-    protected static final VoxelShape SHAPE = Shapes.or(
-            Block.box(6.999, 0.499, 6.999, 10.001, 2.501, 9.001),
-            Block.box(9, 0.5, 6, 10, 2.5, 7),
-            Block.box(9, -0.2, 9.4, 10, 1.8, 10.4),
-            Block.box(7, 0.5, 6, 8, 2.5, 7),
-            Block.box(7, -0.2, 9.4, 8, 1.8, 10.4),
-            Block.box(5, 0.25, 7, 6, 2.25, 9),
-            Block.box(9.75, 1.25, 7.5, 11.75, 2.25, 8.5),
-            Block.box(5.5, 2.25, 7, 6.5, 3.25, 7),
-            Block.box(7, 2.25, 8.5, 8, 3.25, 8.5),
-            Block.box(6.5, 1.5, 7.5, 7.5, 2.5, 8.5)
-    ).optimize(); // optimize shape for performance
+public class PosmBlock extends HorizontalDirectionalBlock {
 
-    public PosmBlock(Properties properties) {
+    // add the map codec
+    public static final MapCodec<PosmBlock> CODEC = simpleCodec(PosmBlock::new);
+
+
+    // simple tiny box instead of complex shape
+    protected static final VoxelShape SIMPLE_SHAPE = Block.box(5.0, 0.0, 6.0, 11.0, 3.0, 10.0);
+
+    // add codec() method override
+    @Override
+    public MapCodec<PosmBlock> codec() {
+        return CODEC;
+    }
+
+    public PosmBlock(BlockBehaviour.Properties properties) {
         super(properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH));
     }
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
-        // return shape
-        return SHAPE;
+        return SIMPLE_SHAPE;
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        return this.defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite());
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(BlockStateProperties.HORIZONTAL_FACING);
+    }
+
+    @Override
+    public BlockState rotate(BlockState state, Rotation rot) {
+        return state.setValue(BlockStateProperties.HORIZONTAL_FACING, rot.rotate(state.getValue(BlockStateProperties.HORIZONTAL_FACING)));
+    }
+
+    @Override
+    public BlockState mirror(BlockState state, Mirror mirrorIn) {
+        return state.rotate(mirrorIn.getRotation(state.getValue(BlockStateProperties.HORIZONTAL_FACING)));
     }
 }
