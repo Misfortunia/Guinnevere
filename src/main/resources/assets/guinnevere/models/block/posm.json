@@ -2,7 +2,8 @@
   "credit": "made with blockbench",
   "render_type": "minecraft:cutout",
   "textures": {
-    "0": "guinnevere:block/posm"
+    "0": "guinnevere:block/posm",
+    "particle": "guinnevere:block/posm"
   },
   "elements": [
     {
